@@ -14,7 +14,7 @@ function MessageField() {
             <Header />
             <Box sx={{ display: 'block', height: "70vh", overflow: "scroll", overflowY: 'hidden', overflowX: 'hidden' }}>
                 {
-                    messages.map((message: { message: string, username: string, time: string, }) => <ChatMessage key={message.time} message={message} />)
+                    messages.map((message: { message: string, username: string, time: string, }) => <>{message.message.length > 0 && <ChatMessage key={message.time} message={message} />} </>)
                 }
             </Box>
             <UserInput />
