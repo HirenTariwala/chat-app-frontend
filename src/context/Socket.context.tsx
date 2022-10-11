@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { io } from "socket.io-client";
-const Socket: any = io("http://localhost:3001");
+const Socket: any = io("https://year-chat-app.herokuapp.com/");
 
 export type SktMsgContextItf = {
     sendMessage: (message: string) => void;
